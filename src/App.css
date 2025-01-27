@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Images */
+.pattern-lines {
+  @apply absolute top-0 left-0 right-0 bottom-0 w-full -z-10;
+}
+.pattern-squiggly-top {
+  animation-name: patternSquiggly;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  @apply absolute top-5 right-0 w-[20%] -z-10;
+}
+.pattern-squiggly-bottom {
+  animation-name: patternSquiggly;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  @apply absolute left-0 bottom-0 w-[50%] -z-10;
+}
+
+@keyframes patternSquiggly {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Logo */
+.logo {
+  @apply flex items-center justify-center mx-auto mb-14;
+}
+
+/* Ticket background */
+.ticket-bg {
+  @apply max-w-[500px] relative mx-auto mt-20 flex items-center justify-between;
+}
+
+/* Text color effect */
+.text-color-effect {
+  color: transparent;
+  background: linear-gradient(to right, hsl(7, 88%, 67%), hsl(0, 0%, 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: "Inconsolata", serif;
+  background-size: cover;
+  background-image: url("./assets/images/background-mobile.png");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+input {
+  outline: none;
+  background: none;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url("./assets/images/background-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("./assets/images/background-desktop.png");
+  }
+}
