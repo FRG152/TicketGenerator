@@ -13,6 +13,7 @@ import patternSquigglyLineBottom from "../assets/images/pattern-squiggly-line-bo
 const TicketPage = () => {
   const [data, setData] = useState({
     avatar: "",
+    username: "",
     full_name: "",
     email_address: "",
   });

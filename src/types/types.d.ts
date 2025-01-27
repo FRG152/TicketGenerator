@@ -1,9 +1,8 @@
 export interface DataProps {
-  data: {
-    avatar: string;
-    full_name: string;
-    email_address: string;
-  };
+  avatar: string;
+  username: string;
+  full_name: string;
+  email_address: string;
 }
 
 export interface FormPageProps {

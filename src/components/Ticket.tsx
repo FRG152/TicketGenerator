@@ -9,7 +9,7 @@ import Logo from "../assets/images/logo-full.svg";
 import bgTicket from "../assets/images/pattern-ticket.svg";
 import iconGithub from "../assets/images/icon-github.svg";
 
-const TicketComponent = ({ data }: DataProps) => {
+const TicketComponent = ({ data }: { data: DataProps }) => {
   const ref = useRef<HTMLImageElement>(null);
   const [height, setHeight] = useState(280);
 

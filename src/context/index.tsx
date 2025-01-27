@@ -1,13 +1,7 @@
-import { createContext, useState } from "react";
+import React, { createContext } from "react";
 
 export const GlobalContext = createContext("");
 
-export const GlobalProvider = ({ children }) => {
-  const [avatar, setAvatar] = useState("");
-
-  return (
-    <GlobalContext.Provider value={{ avatar, setAvatar }}>
-      {children}
-    </GlobalContext.Provider>
-  );
+export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
+  return <GlobalContext.Provider value="">{children}</GlobalContext.Provider>;
 };

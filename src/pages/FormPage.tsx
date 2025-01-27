@@ -1,11 +1,8 @@
-// React hook form
-import { useForm } from "react-hook-form";
+// TYPES
+import { DataProps } from "../types/types";
 
 // React Router
 import { useNavigate } from "react-router";
-
-// Types
-import { FormPageProps } from "../types/types";
 
 // Images
 import ImagePicker from "../components/ImagePicker";
@@ -18,13 +15,16 @@ import { zodResolver } from "@hookform/resolvers/zod";
 // Validation schema
 import { schemaTicket } from "../validations/formValidation";
 
+// React hook form
+import { SubmitHandler, useForm } from "react-hook-form";
+
 // Images
 import Logo from "../assets/images/logo-full.svg";
 import PatternLines from "../assets/images/pattern-lines.svg";
 import patternSquigglyLineTop from "../assets/images/pattern-squiggly-line-top.svg";
 import patternSquigglyLineBottom from "../assets/images/pattern-squiggly-line-bottom.svg";
 
-const FormPage = ({ setData }: FormPageProps) => {
+const FormPage = () => {
   const navigate = useNavigate();
 
   const {
@@ -32,14 +32,9 @@ const FormPage = ({ setData }: FormPageProps) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({ resolver: zodResolver(schemaTicket) });
+  } = useForm<DataProps>({ resolver: zodResolver(schemaTicket) });
 
-  const onSubmit = (data: {
-    avatar: string;
-    full_name: string;
-    email_address: string;
-  }) => {
-    setData(data);
+  const onSubmit: SubmitHandler<DataProps> = (data) => {
     navigate("/ticket");
     localStorage.setItem("data", JSON.stringify(data));
   };

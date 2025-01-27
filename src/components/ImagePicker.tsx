@@ -16,9 +16,14 @@ const ImagePicker = ({ name, setValue }: ImagePickerProps) => {
     const inputElement = e.target as HTMLInputElement;
     const file = inputElement.files?.[0];
     if (file) {
+      if (file.size > 7000000) {
+        setError("File too large. Please upload a photo under 70MB");
+        return;
+      }
       const url = URL.createObjectURL(file);
       setValue(name, url);
       setImage(url);
+      setError("");
     }
   };
 
@@ -102,7 +107,7 @@ const ImagePicker = ({ name, setValue }: ImagePickerProps) => {
           data-aos-duration="1500"
         />
         {error ? (
-          <p className="font-extralight text-orange_500">{error}</p>
+          <p className="font-normal text-orange_500">{error}</p>
         ) : (
           <p
             data-aos="fade-up"
