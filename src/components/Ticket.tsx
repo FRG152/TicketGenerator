@@ -29,13 +29,7 @@ const TicketComponent = ({ data }: { data: DataProps }) => {
   }, []);
 
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-easing="ease-in-out"
-      data-aos-duration="1500"
-      className="ticket-bg"
-      style={{ height: height || 280 }}
-    >
+    <div className="ticket-bg" style={{ height: height || 280 }}>
       <img ref={ref} alt="pattern ticket" src={bgTicket} className="absolute" />
       <div className="flex flex-col justify-between h-full p-5">
         <div>

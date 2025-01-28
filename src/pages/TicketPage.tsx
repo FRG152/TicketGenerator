@@ -32,31 +32,14 @@ const TicketPage = () => {
       />
       <img alt="Pattern Lines" src={patternLines} className="pattern-lines" />
       <div>
-        <img
-          src={Logo}
-          alt="logo"
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
-          data-aos-duration="1000"
-          className="logo"
-        />
+        <img src={Logo} alt="logo" className="logo" />
         <div className="flex flex-col items-center gap-5">
-          <h1
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            className="text-center text-white font-bold text-4xl sm:text-6xl"
-          >
+          <h1 className="text-center text-white font-bold text-4xl sm:text-6xl">
             Congrats,{" "}
             <span className="text-color-effect">{data.full_name}</span> <br />
             Your ticket is ready.
           </h1>
-          <span
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            className="text-lg font-light text-center text-white sm:text-2xl"
-          >
+          <span className="text-lg font-light text-center text-white sm:text-2xl">
             We've emailed your ticket to <br />{" "}
             <span className="text-orange_500">{data.email_address}</span> and
             will send updates in <br /> the run up to the event

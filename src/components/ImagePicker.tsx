@@ -29,20 +29,8 @@ const ImagePicker = ({ name, setValue }: ImagePickerProps) => {
 
   return (
     <div className="w-full mt-8">
-      <div
-        data-aos="fade-up"
-        className="font-medium text-lg"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1500"
-      >
-        Upload Avatar
-      </div>
-      <div
-        data-aos="fade-up"
-        data-aos-easing="ease-in-out"
-        data-aos-duration="1500"
-        className="flex justify-center items-center flex-col border-2 border-dashed rounded-lg border-neutral_500 bg-neutral_700_transparent mt-2 p-5"
-      >
+      <div className="font-medium text-lg">Upload Avatar</div>
+      <div className="flex justify-center items-center flex-col border-2 border-dashed rounded-lg border-neutral_500 bg-neutral_700_transparent mt-2 p-5">
         {image ? (
           <>
             <img
@@ -98,23 +86,11 @@ const ImagePicker = ({ name, setValue }: ImagePickerProps) => {
         )}
       </div>
       <div className="flex items-center w-full gap-3 mt-3">
-        <img
-          src={iconInfo}
-          alt="info"
-          width="30"
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
-          data-aos-duration="1500"
-        />
+        <img src={iconInfo} alt="info" width="30" />
         {error ? (
           <p className="font-normal text-orange_500">{error}</p>
         ) : (
-          <p
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1500"
-            className="font-extralight"
-          >
+          <p className="font-extralight">
             Upload your photo (JPG or PNG, max size: 5MB)
           </p>
         )}

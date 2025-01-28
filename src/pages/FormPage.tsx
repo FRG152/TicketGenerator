@@ -48,29 +48,12 @@ const FormPage = () => {
       />
       <img alt="Pattern Lines" src={PatternLines} className="pattern-lines" />
       <div>
-        <img
-          src={Logo}
-          alt="logo"
-          data-aos="fade-up"
-          data-aos-easing="ease-in-out"
-          data-aos-duration="1000"
-          className="logo"
-        />
+        <img src={Logo} alt="logo" className="logo" />
         <div className="flex flex-col items-center gap-5">
-          <h1
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            className="text-center text-white font-bold text-2xl sm:text-6xl"
-          >
+          <h1 className="text-center text-white font-bold text-2xl sm:text-6xl">
             Your Journey to Coding <br /> Conf 2025 Starts Here!
           </h1>
-          <span
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out"
-            data-aos-duration="1000"
-            className="text-center text-white font-extralight text-2xl sm:text-2xl"
-          >
+          <span className="text-center text-white font-extralight text-2xl sm:text-2xl">
             Secure your spot at next year's biggest coding conference
           </span>
         </div>
