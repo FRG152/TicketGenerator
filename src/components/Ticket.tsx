@@ -37,7 +37,7 @@ const TicketComponent = ({ data }: { data: DataProps }) => {
       style={{ height: height || 280 }}
     >
       <img ref={ref} alt="pattern ticket" src={bgTicket} className="absolute" />
-      <div className="flex flex-col justify-between h-full px-5">
+      <div className="flex flex-col justify-between h-full p-5">
         <div>
           <img
             alt="logo"
