@@ -40,7 +40,7 @@
 
 /* Ticket background */
 .ticket-bg {
-  @apply max-w-[500px] relative mx-auto mt-20 flex items-center justify-between;
+  @apply relative my-20 mx-auto max-w-[500px] h-[165px] xs:h-[180px] sm:h-[230px] flex items-center justify-between;
 }
 
 /* Text color effect */
