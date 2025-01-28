@@ -11,7 +11,7 @@ import iconGithub from "../assets/images/icon-github.svg";
 
 const TicketComponent = ({ data }: { data: DataProps }) => {
   const ref = useRef<HTMLImageElement>(null);
-  const [height, setHeight] = useState(280);
+  const [_, setHeight] = useState(280);
 
   useEffect(() => {
     if (ref.current) {
