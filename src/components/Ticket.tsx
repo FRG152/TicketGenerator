@@ -34,7 +34,7 @@ const TicketComponent = ({ data }: { data: DataProps }) => {
       data-aos-easing="ease-in-out"
       data-aos-duration="1500"
       className="ticket-bg"
-      style={{ height: height }}
+      style={{ height: height || 280 }}
     >
       <img ref={ref} alt="pattern ticket" src={bgTicket} className="absolute" />
       <div className="flex flex-col justify-between h-full p-5">
